@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: historical-weather-api
+
+# -----------------------------------------------------------------
+# CLIENT CONFIGURATION (for the Historical Weather API)
+# -----------------------------------------------------------------
+client:
+  open-meteo:
+    base-url: "https://api.open-meteo.com"
+
+    # --- Connection Pool Settings ---
+    # Max total connections in the pool
+    pool:
+      max-total: 200
+      # Max connections allowed for a single route (e.g., to api.open-meteo.com)
+      default-max-per-route: 100
+      # How long (ms) to wait for a connection from the pool before timing out
+      acquire-timeout-ms: 5000
+
+    # --- Timeout Settings (in ms) ---
+    # How long to wait to establish a TCP connection
+    connect-timeout-ms: 5000
+    # How long to wait for a response after sending the request
+    response-timeout-ms: 2000
+
+    # --- Retry Settings (for Spring Retry) ---
+    retry:
+      max-attempts: 3
+      # How long (ms) to wait before the first retry
+      min-backoff-ms: 100
