@@ -10,9 +10,9 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @Service
-public class HourlyClientService {
+public class OpenMeteoClientService {
 
-    private static final Logger log = LoggerFactory.getLogger(HourlyClientService.class);
+    private static final Logger log = LoggerFactory.getLogger(OpenMeteoClientService.class);
     private final RestTemplate restTemplate;
 
     /**
@@ -20,7 +20,7 @@ public class HourlyClientService {
      * named "OpenMeteoRestTemplate" from your RestTemplateConfig.
      */
     @Autowired
-    public HourlyClientService(@Qualifier("OpenMeteoRestTemplate") RestTemplate restTemplate) {
+    public OpenMeteoClientService(@Qualifier("OpenMeteoRestTemplate") RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 

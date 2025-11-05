@@ -7,7 +7,7 @@ spring:
 # -----------------------------------------------------------------
 client:
   open-meteo:
-    base-url: "https://api.open-meteo.com"
+    base-url: "https://api.open-meteo.com/v1"
 
     # --- Connection Pool Settings ---
     # Max total connections in the pool

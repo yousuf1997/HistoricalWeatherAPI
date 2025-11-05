@@ -7,7 +7,7 @@ import java.util.List;
 
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-class HourlyData {
+public class HourlyData {
 
     private List<String> time;
 
